@@ -15,10 +15,10 @@
 			<atom:link href="https://blog.enochyu.com/categories/miscellaneous/index.xml" rel="self" type="application/rss+xml" />
 			<item>
 				<title>Building My Blog With Hugo and GitHub</title>
-				<link>https://blog.enochyu.com/posts/post02_buildingmyblog/</link>
+				<link>https://blog.enochyu.com/posts/post01_buildingmyblog/</link>
 				<pubDate>Sun, 14 Dec 2025 00:00:00 +0000</pubDate>
-				<guid>https://blog.enochyu.com/posts/post02_buildingmyblog/</guid>
-				<description>&lt;p&gt;When I first decided to write my blog, I was thrown into bunch of&#xA;options. I noticed that many of my favorite mathematicians including&#xA;professor Terence Tao uses &lt;em&gt;wordpress.com&lt;/em&gt;. However, I noticed that&#xA;&lt;em&gt;wordpress.com&lt;/em&gt; would generally give less control over my blog, and&#xA;must pay to utilize many of the features. There I wondered,&#xA;&lt;em&gt;why don&amp;rsquo;t I build one myself?&lt;/em&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;static-site-generator-ssg&#34;&gt;Static Site Generator (SSG)&lt;/h2&gt;&#xA;&lt;p&gt;I had two options of hosting via CMS (Content Management System) or&#xA;hosting through SSG (Static Site Generator). The main difference is&#xA;that CMS like Wordpress creates contents dynamically, whereas SSG is&#xA;simply showing the users a pre-built sites. Here, I realized that&#xA;most of my blogs would be text based, and does not require dynamic&#xA;features such as user accounts. Moreover, sites created with SSG is&#xA;much faster and secure compared to ones created with CMS since no&#xA;server-side processing is required when accessing.&lt;/p&gt;</description>
+				<guid>https://blog.enochyu.com/posts/post01_buildingmyblog/</guid>
+				<description>&lt;p&gt;When I first decided to write my blog, I was thrown into bunch of&#xA;options. I noticed that &lt;em&gt;wordpress.com&lt;/em&gt; and &lt;em&gt;medium&lt;/em&gt; are popular&#xA;options when it comes to writing blogs. However, I also noticed that&#xA;many of the popular options would generally give less control over&#xA;my blog and require payments to use many of its features.&#xA;So it became a natural choice for me to just build one myself,&#xA;which was both a dumb and greatest choice that I ever made.&#xA;Maybe I can save this for later blogs.&lt;/p&gt;</description>
 			</item>
 	</channel>
 </rss>

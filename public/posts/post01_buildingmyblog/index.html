@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://blog.enochyu.com/" />
 
 
-<link rel="stylesheet" href="/css/bundle.min.40a90c4728199271b4f9a23f6d24074929ba6f2dd97d5c6aae8744fc5e18c980.css" integrity="sha256-QKkMRygZknG0&#43;aI/bSQHSSm6by3ZfVxqrodE/F4YyYA=">
+<link rel="stylesheet" href="/css/bundle.min.cdedd794400158bd1a2195bd797eb97f0838cf58e3f3b6f182e69f1a83a27b5d.css" integrity="sha256-ze3XlEABWL0aIZW9eX65fwg4z1jj87bxguafGoOie10=">
 
 <script type="application/ld+json">
 {
@@ -59,9 +59,9 @@
     <div class="post-meta">
       <i class="far fa-calendar"></i> December 14, 2025
       <span class="space">|</span>
-      <i class="far fa-clock"></i> 3 min read
+      <i class="far fa-clock"></i> 4 min read
       <span class="space">|</span>
-      <i class="far fa-file-text"></i> 620 words
+      <i class="far fa-file-text"></i> 663 words
       <span class="space">|</span>
       <i class="far fa-eye"></i>
       <span id="view-count"> loading...</span> views
@@ -77,43 +77,45 @@
 
     <div class="post-body">
       <p>When I first decided to write my blog, I was thrown into bunch of
-options. I noticed that many of my favorite mathematicians including
-professor Terence Tao uses <em>wordpress.com</em>. However, I noticed that
-<em>wordpress.com</em> would generally give less control over my blog, and
-must pay to utilize many of the features. There I wondered,
-<em>why don&rsquo;t I build one myself?</em></p>
+options. I noticed that <em>wordpress.com</em> and <em>medium</em> are popular
+options when it comes to writing blogs. However, I also noticed that
+many of the popular options would generally give less control over
+my blog and require payments to use many of its features.
+So it became a natural choice for me to just build one myself,
+which was both a dumb and greatest choice that I ever made.
+Maybe I can save this for later blogs.</p>
 <h2 id="static-site-generator-ssg">Static Site Generator (SSG)</h2>
 <p>I had two options of hosting via CMS (Content Management System) or
 hosting through SSG (Static Site Generator). The main difference is
 that CMS like Wordpress creates contents dynamically, whereas SSG is
 simply showing the users a pre-built sites. Here, I realized that
-most of my blogs would be text based, and does not require dynamic
-features such as user accounts. Moreover, sites created with SSG is
+most of my blogs would be text based, which does not require dynamic
+features such as user accounts. Also, sites created with SSG is
 much faster and secure compared to ones created with CMS since no
 server-side processing is required when accessing.</p>
-<p>Now there are multiple Static Site Generators. I personally found
-Hugo as the ideal SSG since I will have large amounts of posts,
-and Hugo is known to be fast with Go&rsquo;s performance.</p>
-<p>After generating the blog, there must be a hosting platform to
-actually deploy it. There are multiple options out there, but I
-chose to use GitHub Pages because it is free and I store my source
-codes in GitHub anyway. Here is a link to the
-<a href="https://github.com/enochyu-official/blog">sources</a> for those who
-are interested.</p>
+<p>Again, I faced multiple options for Static Site Generators.
+I personally found Hugo as the ideal SSG because I seek to write large
+amounts of posts and Hugo is known to be fast with Go&rsquo;s performance.</p>
+<p>Finally after generating the blog locally, there must be a hosting
+platform to actually deploy it. I thought of using github pages
+because I will be storing the source files there anyways, but as I get
+my domain I just decided to host in my subdomain. The
+<a href="https://github.com/enochyu-official/blog">source files</a> are still
+hosted in GitHub for anyone interested.</p>
 <h2 id="installing-hugo-and-making-repository-in-github">Installing Hugo and Making Repository in GitHub</h2>
 <p>To install Hugo, please refer to the official
-<a href="https://gohugo.io/installation/">installation guide</a>. If you are on
-Windows, copy and paste <code>winget install Hugo.Hugo.Extended</code> to your
-terminal to install. For Mac users with Homebrew, <code>brew install hugo</code>
-will do the job. I don&rsquo;t think I need to include one for Linux
-users :))</p>
-<p>For code editors, I personally use terminal text editor NeoVim due
-to its speed and flexibility. Here is the official
-<a href="https://neovim.io/">installation guide</a> for your interest.
-However, I believe other code editors are perfectly fine!</p>
+<a href="https://gohugo.io/installation/">installation guide</a>. But if you
+chose to stick here and you are on Windows, copy and paste
+<code>winget install Hugo.Hugo.Extended</code> to your terminal to install.
+For Mac users with Homebrew, <code>brew install hugo</code> will do the job.
+I don&rsquo;t think I need to include one for Linux users :))</p>
+<p>For text editors, I personally use <a href="https://neovim.io/">NeoVim</a>
+due to its speed and flexibility. But there are really great
+text editors and IDE, and it is up to you!</p>
 <p>If you have Hugo and code editor ready to go, we need to create a
 repository in GitHub. I personally made a public repository named
-<strong>blog</strong>. Next, we need to enter following commands in terminal.</p>
+<strong>blog.enochyu.com</strong>. Next, we need to enter following commands
+in terminal.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cd BLOG-NAME
 </span></span><span style="display:flex;"><span>git init
 </span></span><span style="display:flex;"><span>git add .
@@ -123,11 +125,13 @@ repository in GitHub. I personally made a public repository named
 </span></span></code></pre></div><p>Sometimes, you many need to create a token in GitHub to run the
 final command. When creating, &ldquo;repo&rdquo; section must be checked!</p>
 <h2 id="theme">Theme</h2>
-<p>As for my theme, to be free from copyright issues, I decided to
-create my own theme. My Hugo theme was created by merging and
-reading multiple themes from <a href="https://themes.gohugo.io/">Hugo Themes</a>.</p>
-<p>If you wish to implement the theme as a submodule, we must run
-the following commands in your project.</p>
+<p>As for my theme, I decided to create my own theme to be free from
+copyright issues. My Hugo theme was created by merging and reading
+multiple themes from <a href="https://themes.gohugo.io/">Hugo Themes</a>.
+Please check this page out if you haven&rsquo;t yet; all themes that you
+can imagine is probabily up there.</p>
+<p>But if you would like to implement my theme as a submodule,
+you can run the following commands in your project.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/enochyu-official/EnochBlogTheme themes/EnochBlogTheme
 </span></span><span style="display:flex;"><span>git submodule update --init --recursive
 </span></span></code></pre></div><p>To integrate the theme, please update your <code>hugo.toml</code>. It should
@@ -166,13 +170,7 @@ ran to update the GitHub repository.</p>
 </span></span><span style="display:flex;"><span>git push
 </span></span></code></pre></div><p>Next, follow the steps from
 <a href="https://pages.cloudflare.com/">Cloudflare Pages</a>.</p>
-<p>Your blog is successfully published!!</p>
-<div class="comments-note">
-  💬 <strong>Comments</strong><br>
-  Please don't hesitate to comment any questions or feedback!!
-  Posting a comment requires a free GitHub account :))
-</div>
-
+<p>And this is how I published my blog!!</p>
 
     </div>
     
@@ -215,14 +213,11 @@ ran to update the GitHub repository.</p>
 <nav class="post-navigation">
   <div class="nav-buttons">
     
-    <a href="https://blog.enochyu.com/posts/post01_readme/" class="nav-button">
-      <div class="nav-label"><i class="fas fa-arrow-left"></i> Previous</div>
-      <div class="nav-title">From the Beginning: My First Post</div>
-    </a>
+    <div></div>
     
 
     
-    <a href="https://blog.enochyu.com/posts/post03_acceptingfailure/" class="nav-button nav-next">
+    <a href="https://blog.enochyu.com/posts/post02_acceptingfailure/" class="nav-button nav-next">
       <div class="nav-label">Next <i class="fas fa-arrow-right"></i></div>
       <div class="nav-title">Accepting Failure: After Giving It My All</div>
     </a>

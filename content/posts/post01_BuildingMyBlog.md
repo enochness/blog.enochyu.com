@@ -6,11 +6,13 @@ categories: ["Miscellaneous"]
 ---
 
 When I first decided to write my blog, I was thrown into bunch of
-options. I noticed that many of my favorite mathematicians including
-professor Terence Tao uses *wordpress.com*. However, I noticed that
-*wordpress.com* would generally give less control over my blog, and
-must pay to utilize many of the features. There I wondered,
-*why don't I build one myself?*
+options. I noticed that *wordpress.com* and *medium* are popular
+options when it comes to writing blogs. However, I also noticed that
+many of the popular options would generally give less control over
+my blog and require payments to use many of its features.
+So it became a natural choice for me to just build one myself,
+which was both a dumb and greatest choice that I ever made.
+Maybe I can save this for later blogs.
 
 ## Static Site Generator (SSG)
 
@@ -18,40 +20,40 @@ I had two options of hosting via CMS (Content Management System) or
 hosting through SSG (Static Site Generator). The main difference is
 that CMS like Wordpress creates contents dynamically, whereas SSG is
 simply showing the users a pre-built sites. Here, I realized that
-most of my blogs would be text based, and does not require dynamic
-features such as user accounts. Moreover, sites created with SSG is
+most of my blogs would be text based, which does not require dynamic
+features such as user accounts. Also, sites created with SSG is
 much faster and secure compared to ones created with CMS since no
 server-side processing is required when accessing.
 
-Now there are multiple Static Site Generators. I personally found
-Hugo as the ideal SSG since I will have large amounts of posts,
-and Hugo is known to be fast with Go's performance.
+Again, I faced multiple options for Static Site Generators.
+I personally found Hugo as the ideal SSG because I seek to write large
+amounts of posts and Hugo is known to be fast with Go's performance.
 
-After generating the blog, there must be a hosting platform to
-actually deploy it. There are multiple options out there, but I
-chose to use GitHub Pages because it is free and I store my source
-codes in GitHub anyway. Here is a link to the
-[sources](https://github.com/enochyu-official/blog) for those who
-are interested.
+Finally after generating the blog locally, there must be a hosting
+platform to actually deploy it. I thought of using github pages
+because I will be storing the source files there anyways, but as I get
+my domain I just decided to host in my subdomain. The
+[source files](https://github.com/enochyu-official/blog) are still
+hosted in GitHub for anyone interested.
 
 
 ## Installing Hugo and Making Repository in GitHub
 
 To install Hugo, please refer to the official
-[installation guide](https://gohugo.io/installation/). If you are on
-Windows, copy and paste `winget install Hugo.Hugo.Extended` to your
-terminal to install. For Mac users with Homebrew, `brew install hugo`
-will do the job. I don't think I need to include one for Linux
-users :))
+[installation guide](https://gohugo.io/installation/). But if you
+chose to stick here and you are on Windows, copy and paste
+`winget install Hugo.Hugo.Extended` to your terminal to install.
+For Mac users with Homebrew, `brew install hugo` will do the job.
+I don't think I need to include one for Linux users :))
 
-For code editors, I personally use terminal text editor NeoVim due
-to its speed and flexibility. Here is the official
-[installation guide](https://neovim.io/) for your interest.
-However, I believe other code editors are perfectly fine!
+For text editors, I personally use [NeoVim](https://neovim.io/)
+due to its speed and flexibility. But there are really great
+text editors and IDE, and it is up to you!
 
 If you have Hugo and code editor ready to go, we need to create a
 repository in GitHub. I personally made a public repository named 
-**blog**. Next, we need to enter following commands in terminal.
+**blog.enochyu.com**. Next, we need to enter following commands
+in terminal.
 ```bash
 cd BLOG-NAME
 git init
@@ -65,12 +67,14 @@ final command. When creating, "repo" section must be checked!
 
 ## Theme
 
-As for my theme, to be free from copyright issues, I decided to
-create my own theme. My Hugo theme was created by merging and
-reading multiple themes from [Hugo Themes](https://themes.gohugo.io/).
+As for my theme, I decided to create my own theme to be free from
+copyright issues. My Hugo theme was created by merging and reading
+multiple themes from [Hugo Themes](https://themes.gohugo.io/).
+Please check this page out if you haven't yet; all themes that you
+can imagine is probabily up there.
 
-If you wish to implement the theme as a submodule, we must run
-the following commands in your project.
+But if you would like to implement my theme as a submodule,
+you can run the following commands in your project.
 ```bash
 git submodule add https://github.com/enochyu-official/EnochBlogTheme themes/EnochBlogTheme
 git submodule update --init --recursive
@@ -123,10 +127,9 @@ git push
 Next, follow the steps from
 [Cloudflare Pages](https://pages.cloudflare.com/).
 
-Your blog is successfully published!!
+And this is how I published my blog!!
 
 
-{{< comments-note >}}
 
 
 
