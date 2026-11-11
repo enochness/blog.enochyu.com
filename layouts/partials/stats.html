@@ -9,7 +9,7 @@
     <div class="stats-content">
       {{ range .Site.Taxonomies.categories.ByCount }}
       <div class="stats-item">
-        <a href="{{ .Page.Permalink }}" class="stats-badge">{{ .Page.Title }}</a>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         <span>{{ .Count }}</span>
       </div>
       {{ end }}
@@ -21,7 +21,7 @@
     <div class="stats-content">
       {{ range .Site.Taxonomies.tags.ByCount }} 
       <div class="stats-item">
-        <a href="{{ .Page.Permalink }}" class="stats-badge">{{ .Page.Title }}</a>
+        <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
         <span>{{ .Count }}</span>
       </div>
       {{ end }} 

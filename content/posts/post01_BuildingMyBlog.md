@@ -33,7 +33,7 @@ Finally after generating the blog locally, there must be a hosting
 platform to actually deploy it. I thought of using github pages
 because I will be storing the source files there anyways, but as I get
 my domain I just decided to host in my subdomain. The
-[source files](https://github.com/enochyu-official/blog) are still
+[source files](https://github.com/enochness/blog.enochyu.com) are still
 hosted in GitHub for anyone interested.
 
 
@@ -76,7 +76,7 @@ can imagine is probabily up there.
 But if you would like to implement my theme as a submodule,
 you can run the following commands in your project.
 ```bash
-git submodule add https://github.com/enochyu-official/EnochBlogTheme themes/EnochBlogTheme
+git submodule add https://github.com/enochness/EnochBlogTheme themes/EnochBlogTheme
 git submodule update --init --recursive
 ```
 
