@@ -1,9 +1,7 @@
 baseURL = 'https://blog.enochyu.com'
-languageCode = 'en-US'
+locale = 'en-us'
 title = "Enoch Yu's Blog"
 
-defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = false
 enableRobotsTXT = true
 
 [params]
@@ -15,12 +13,22 @@ enableRobotsTXT = true
 
 [params.social]
   website = "https://enochyu.com/"
-  youtube = "https://www.youtube.com/channel/UCCnkn0YRKStraznc7kuICRg"
-  github = "https://github.com/enochyu-official"
+  youtube = "https://www.youtube.com/channel/enochness"
+  github = "https://github.com/enochness"
 
 [params.comments]
-  enabled = true
-  provider = "giscus"
+  api = "https://blog.enochyu.com/api/comments"
+  site = "blog"
+  turnstile = "0x4AAAAAAF8hI3sEHSj440sV"
+
+[outputs]
+  home = ["html", "rss", "threads"]
+
+[outputFormats.threads]
+  mediaType = "application/json"
+  baseName = "comment-threads"
+  isPlainText = true
+  notAlternative = true
 
 [taxonomies]
   category = "categories"

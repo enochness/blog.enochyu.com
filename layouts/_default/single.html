@@ -36,22 +36,7 @@
     {{ partial "toc.html" . }}
 </div>
 
-<section class="giscus"></section>
-<script src="https://giscus.app/client.js"
-    data-repo="enochyu-official/blog.enochyu.com"
-    data-repo-id="R_kgDOQmE9xg"
-    data-category="General"
-    data-category-id="DIC_kwDOQmE9xs4Czr9C"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="0"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="light"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-</script>
+{{ if eq .Type "posts" }}{{ partial "comments.html" . }}{{ end }}
 
 <nav class="post-navigation">
   <div class="nav-buttons">

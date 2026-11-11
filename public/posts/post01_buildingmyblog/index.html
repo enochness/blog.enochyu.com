@@ -16,7 +16,7 @@
 <link rel="canonical" href="https://blog.enochyu.com/" />
 
 
-<link rel="stylesheet" href="/css/bundle.min.cdedd794400158bd1a2195bd797eb97f0838cf58e3f3b6f182e69f1a83a27b5d.css" integrity="sha256-ze3XlEABWL0aIZW9eX65fwg4z1jj87bxguafGoOie10=">
+<link rel="stylesheet" href="/css/bundle.min.5b0feaceaa437c7a0de4d83881c15de6d40c39ac3210d7f67cefc7974140e335.css" integrity="sha256-Ww/qzqpDfHoN5Ng4gcFd5tQMOawyENf2fO/Hl0FA4zU=">
 
 <script type="application/ld+json">
 {
@@ -100,7 +100,7 @@ amounts of posts and Hugo is known to be fast with Go&rsquo;s performance.</p>
 platform to actually deploy it. I thought of using github pages
 because I will be storing the source files there anyways, but as I get
 my domain I just decided to host in my subdomain. The
-<a href="https://github.com/enochyu-official/blog">source files</a> are still
+<a href="https://github.com/enochness/blog.enochyu.com">source files</a> are still
 hosted in GitHub for anyone interested.</p>
 <h2 id="installing-hugo-and-making-repository-in-github">Installing Hugo and Making Repository in GitHub</h2>
 <p>To install Hugo, please refer to the official
@@ -132,7 +132,7 @@ Please check this page out if you haven&rsquo;t yet; all themes that you
 can imagine is probabily up there.</p>
 <p>But if you would like to implement my theme as a submodule,
 you can run the following commands in your project.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/enochyu-official/EnochBlogTheme themes/EnochBlogTheme
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/enochness/EnochBlogTheme themes/EnochBlogTheme
 </span></span><span style="display:flex;"><span>git submodule update --init --recursive
 </span></span></code></pre></div><p>To integrate the theme, please update your <code>hugo.toml</code>. It should
 include the following.</p>
@@ -193,22 +193,15 @@ ran to update the GitHub repository.</p>
 
 </div>
 
-<section class="giscus"></section>
-<script src="https://giscus.app/client.js"
-    data-repo="enochyu-official/blog.enochyu.com"
-    data-repo-id="R_kgDOQmE9xg"
-    data-category="General"
-    data-category-id="DIC_kwDOQmE9xs4Czr9C"
-    data-mapping="pathname"
-    data-strict="0"
-    data-reactions-enabled="0"
-    data-emit-metadata="0"
-    data-input-position="bottom"
-    data-theme="light"
-    data-lang="en"
-    crossorigin="anonymous"
-    async>
-</script>
+
+<section class="comments" id="comments" data-api="https://blog.enochyu.com/api/comments" data-site="blog" data-path="/posts/post01_buildingmyblog/" data-sitekey="0x4AAAAAAF8hI3sEHSj440sV">
+  <h2>Comments</h2>
+  <noscript><p class="comments-note">Comments need JavaScript.</p></noscript>
+</section>
+
+<script src="/js/comments.js" defer></script>
+
+
 
 <nav class="post-navigation">
   <div class="nav-buttons">
