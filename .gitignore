@@ -1,8 +1,4 @@
 .DS_Store
-
 .hugo_build.lock
 public/
-
-.wrangler
-node_modules/
 
