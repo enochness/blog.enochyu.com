@@ -1,4 +1,4 @@
-export const UNAVAILABLE = 'Comments are unavailable right now.';
+const UNAVAILABLE = 'Comments are unavailable right now.';
 
 export class Failure extends Error {
   constructor(status, code, message = UNAVAILABLE, pause = 0) {

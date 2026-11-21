@@ -1,4 +1,4 @@
-import { GITHUB, LIMITS, SITES } from './config.js';
+import { LIMITS, SITES } from './config.js';
 import { encodeBody, normalizedText, parseName, parseText } from './content.js';
 import { Failure } from './failure.js';
 import { addComment, createDiscussion, findDiscussion, readComments } from './github.js';
@@ -106,11 +106,7 @@ async function get(request, env, url, allowed) {
   await assertNotPaused(env);
   const discussion = await findDiscussion(env, 'read', `${siteKey}:${path}`);
   const payload = JSON.stringify(discussion
-    ? {
-        locked: discussion.locked,
-        url: `https://github.com/${GITHUB.owner}/${GITHUB.repo}/discussions/${discussion.number}`,
-        comments: await readComments(env, 'read', discussion.id),
-      }
+    ? { locked: discussion.locked, comments: await readComments(env, 'read', discussion.id) }
     : { locked: false, comments: [] });
   await caches.default.put(key, new Response(payload, {
     headers: { 'Content-Type': 'application/json', 'Cache-Control': `public, max-age=${LIMITS.readCacheSeconds}` },

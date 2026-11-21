@@ -6,7 +6,7 @@ const TTL = { expirationTtl: 7200 };
 const SLOW_DOWN = 'You are commenting too quickly. Please try again later.';
 const BUSY = 'Comments are busy right now. Please try again later.';
 
-export function network(ip) {
+function network(ip) {
   if (ip.includes('.')) return ip.slice(ip.lastIndexOf(':') + 1);
   const [head, tail = ''] = ip.split('::');
   const front = head ? head.split(':') : [];

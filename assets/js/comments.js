@@ -22,11 +22,11 @@
   const status = el('p', { className: 'comments-note', role: 'status' }, 'Loading comments…');
   const list = el('ol', { className: 'comment-list' });
   const replying = el('p', { className: 'comment-replying', hidden: true });
-  const name = el('input', { id: 'comment-name', name: 'name', maxLength: 40, autocomplete: 'nickname', placeholder: '' });
+  const name = el('input', { id: 'comment-name', name: 'name', maxLength: 40, autocomplete: 'nickname' });
   const text = el('textarea', { id: 'comment-text', name: 'text', maxLength: 2000, rows: 4, required: true });
   const trap = el('input', { name: 'website', tabIndex: -1, autocomplete: 'off' });
   const check = el('div', { className: 'comment-check' });
-  const submit = el('button', { className: 'stats-badge', type: 'submit' }, 'Post comment');
+  const submit = el('button', { className: 'comment-submit', type: 'submit' }, 'Post comment');
   const cancel = el('button', { className: 'comment-action', type: 'button', hidden: true }, 'Cancel reply');
   const formStatus = el('p', { className: 'comments-note', role: 'status' });
   const form = el('form', { className: 'comment-form', hidden: true },
@@ -39,14 +39,6 @@
     check,
     el('div', { className: 'comment-actions' }, submit, cancel),
     formStatus,
-    el('p', { className: 'comments-note' },
-      'Comments and the name you enter are posted by a bot as public GitHub Discussions in this blog\'s repository. ',
-      'To prevent abuse, a keyed hash (HMAC) of your IP address ',
-      '(the full IPv4 address, or the IPv6 /64) is kept in Cloudflare KV for 2 hours. ',
-      'To have a comment deleted, contact me through ',
-      el('a', { href: 'https://enochyu.com/#contact' }, 'enochyu.com'),
-      '.',
-    ),
   );
   root.append(status, list, form);
 

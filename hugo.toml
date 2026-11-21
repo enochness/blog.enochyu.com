@@ -3,17 +3,15 @@ locale = 'en-us'
 title = "Enoch Yu's Blog"
 
 enableRobotsTXT = true
+disableKinds = ["section", "taxonomy", "term"]
 
 [params]
   author = "Enoch Yu"
-  avatar = "/avatar.png"
-  mainSections = ["posts"]
   favicon = "/favicon/favicon.ico"
-  math = true
 
 [params.social]
   website = "https://enochyu.com/"
-  youtube = "https://www.youtube.com/channel/enochness"
+  youtube = "https://www.youtube.com/@enochness"
   github = "https://github.com/enochness"
 
 [params.comments]
@@ -30,24 +28,7 @@ enableRobotsTXT = true
   isPlainText = true
   notAlternative = true
 
-[taxonomies]
-  category = "categories"
-  tag      = "tags"
-
 [markup]
-  [markup.tableOfContents]
-    startLevel = 2
-    endLevel = 4
-    ordered = false
   [markup.highlight]
-
-[[menu.main]]
-  name = "Home"
-  url = "/"
-  weight = 1
-
-[[menu.main]]
-  name = "Archives"
-  url = "/archives/"
-  weight = 2
+    style = "tango"
 

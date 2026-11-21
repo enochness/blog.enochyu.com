@@ -1,59 +1,13 @@
 {{ define "main" }}
-<div class="post-container">
-  <article class="post-content">
-    <h1 class="post-title">{{ .Title }}</h1>
-    <div class="post-meta">
-      <i class="far fa-calendar"></i> {{ .Date.Format "January 2, 2006" }}
-      <span class="space">|</span>
-      <i class="far fa-clock"></i> {{ .ReadingTime }} min read
-      <span class="space">|</span>
-      <i class="far fa-file-text"></i> {{ .WordCount }} words
-      <span class="space">|</span>
-      <i class="far fa-eye"></i>
-      <span id="view-count"> loading...</span> views
+<h1>{{ .Title }}</h1>
+<p class="post-meta">
+  <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan, 2006" }}</time>
+  &middot; {{ .ReadingTime }} min read
+</p>
 
-      {{ with .Params.categories }} 
-      <span class="space">|</span>
-      <i class="fas fa-folder"></i> 
-      {{ range first 1 . }}
-      <a href="{{ "categories" | relURL }}/{{ . | urlize }}/">{{ . }}</a>
-      {{ end }}
-      {{ end }}
-    </div>
-
-    <div class="post-body">
-      {{ .Content }}
-    </div>
-    {{ with .Params.tags }}
-    <div class="post-tags">
-      <strong>Tags:</strong>
-      {{ range . }}
-      <a href="{{ "tags" | relURL }}/{{ . | urlize }}/" class="stats-badge">{{ . }}</a>
-      {{ end }}
-    </div>
-    {{ end }}
-  </article>
-    {{ partial "toc.html" . }}
+<div class="post-body">
+  {{ .Content }}
 </div>
 
-{{ if eq .Type "posts" }}{{ partial "comments.html" . }}{{ end }}
-
-<nav class="post-navigation">
-  <div class="nav-buttons">
-    {{ with .PrevInSection }}
-    <a href="{{ .Permalink }}" class="nav-button">
-      <div class="nav-label"><i class="fas fa-arrow-left"></i> Previous</div>
-      <div class="nav-title">{{ .Title }}</div>
-    </a>
-    {{ end }}
-
-    {{ with .NextInSection }}
-    <a href="{{ .Permalink }}" class="nav-button nav-next">
-      <div class="nav-label">Next <i class="fas fa-arrow-right"></i></div>
-      <div class="nav-title">{{ .Title }}</div>
-    </a>
-    {{ end }}
-  </div>
-</nav>
+{{ partial "comments.html" . }}
 {{ end }}
-

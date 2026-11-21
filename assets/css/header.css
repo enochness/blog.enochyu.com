@@ -1,0 +1,50 @@
+.header nav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.3rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.header a {
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  text-decoration: none;
+}
+
+.header a.header-name {
+  color: var(--accent-color);
+  font-size: 1.6rem;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+#social-icons {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+#social-icons .header-icon {
+  display: inline-flex;
+  color: var(--text-gray);
+  transition: color 0.3s ease;
+}
+
+#social-icons .header-icon:hover {
+  color: var(--accent-color);
+}
+
+#social-icons svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}

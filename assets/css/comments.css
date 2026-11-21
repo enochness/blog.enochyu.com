@@ -1,20 +1,13 @@
 .comments {
-  --muted: rgba(27, 18, 18, 0.7);
-  --line: rgba(128, 128, 128, 0.65);
-  width: 70vw;
-  margin: 0 auto;
+  margin-top: 2rem;
 }
 
 .comments h2 {
   margin-bottom: 12px;
 }
 
-.comments-note a {
-  color: inherit;
-}
-
 .comments-note {
-  color: var(--muted);
+  color: var(--text-gray);
   font-size: 15px;
 }
 
@@ -33,7 +26,7 @@
 }
 
 .comment-meta {
-  color: var(--muted);
+  color: var(--text-gray);
   font-size: 15px;
 }
 
@@ -43,7 +36,7 @@
 }
 
 .comment-verified {
-  color: var(--accent-color1);
+  color: var(--accent-color);
   font-weight: 600;
 }
 
@@ -59,12 +52,9 @@
   border-left: 2px solid var(--line);
 }
 
-.comment-replies > .comment {
-  padding-block: 12px;
-  border: 0;
-}
-
+.comment-replies > .comment,
 .comment-replies > .comment:first-child {
+  padding-block: 12px;
   border: 0;
 }
 
@@ -73,7 +63,7 @@
   padding: 0;
   border: 0;
   background: none;
-  color: var(--accent-color3);
+  color: var(--accent-color);
   font: inherit;
   font-size: 15px;
   font-weight: 500;
@@ -101,7 +91,7 @@
   width: 100%;
   padding: 12px 14px;
   border: 1px solid var(--line);
-  border-radius: 5px;
+  border-radius: 3px;
   background: var(--bg-color);
   color: var(--text-dark);
   font: inherit;
@@ -113,14 +103,25 @@
 
 .comment-form input:focus,
 .comment-form textarea:focus {
-  outline: 1px solid var(--accent-color1);
+  outline: 1px solid var(--accent-color);
 }
 
-.comment-form .stats-badge {
-  font-family: inherit;
+.comment-submit {
+  padding: 0.4rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+  background: transparent;
+  color: var(--text-dark);
+  font: inherit;
+  cursor: pointer;
 }
 
-.comment-form .stats-badge:disabled {
+.comment-submit:hover {
+  border-color: var(--accent-color);
+  color: var(--accent-color);
+}
+
+.comment-submit:disabled {
   opacity: 0.5;
   cursor: default;
   pointer-events: none;
@@ -152,10 +153,4 @@
 
 .comment-actions .comment-action {
   margin-top: 0;
-}
-
-@media (max-width: 1023px) {
-  .comments {
-    width: 90vw;
-  }
 }

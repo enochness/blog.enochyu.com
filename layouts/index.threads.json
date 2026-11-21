@@ -1,5 +1,5 @@
 {{- $paths := slice -}}
-{{- range where site.RegularPages "Type" "posts" -}}
+{{- range site.RegularPages -}}
   {{- $paths = $paths | append .RelPermalink -}}
 {{- end -}}
 {{- $paths | jsonify -}}

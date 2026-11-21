@@ -6,7 +6,7 @@ const API = 'https://api.github.com';
 const HEADERS = { Accept: 'application/vnd.github+json', 'User-Agent': 'blog-comments' };
 const COMMENT = 'id createdAt isMinimized body author { __typename login ... on User { databaseId } }';
 
-export const QUERIES = {
+const QUERIES = {
   repository: `query($owner: String!, $repo: String!) {
     repository(owner: $owner, name: $repo) { id discussionCategories(first: 25) { nodes { id slug } } }
   }`,
@@ -14,7 +14,7 @@ export const QUERIES = {
     repository(owner: $owner, name: $repo) {
       discussions(first: 100, after: $after, categoryId: $category, orderBy: { field: CREATED_AT, direction: ASC }) {
         pageInfo { hasNextPage endCursor }
-        nodes { id number title locked author { __typename login } }
+        nodes { id title locked author { __typename login } }
       }
     }
   }`,
