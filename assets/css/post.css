@@ -24,7 +24,7 @@
 
 .post-body ul,
 .post-body ol {
-  padding-left: 1.5rem;
+  padding-left: 2.5rem;
 }
 
 .post-body img {
@@ -74,4 +74,8 @@
   padding: 0.3rem 0.6rem;
   border: 1px solid var(--line);
   text-align: left;
+}
+
+.post-body a {
+  text-decoration: underline;
 }
